@@ -1,0 +1,102 @@
+{
+  "generated_at": "2026-11-02T13:52:21",
+  "model": "openai/gpt-oss-120b",
+  "rows_checked": 300,
+  "exceptions_found": 11,
+  "llm_attempts": 1,
+  "llm_status": "ok",
+  "commentary": {
+    "findings": [
+      {
+        "commentary": "Rates desk reports missing var_99 on 2025-01-15.",
+        "date": "2025-01-15",
+        "desk": "Rates",
+        "issue_type": "missing_value",
+        "recommended_action": "Identify source of missing var_99 and restore data.",
+        "severity": "high"
+      },
+      {
+        "commentary": "FX desk has missing pnl on 2025-01-22.",
+        "date": "2025-01-22",
+        "desk": "FX",
+        "issue_type": "missing_value",
+        "recommended_action": "Check data pipeline for pnl feed and reload.",
+        "severity": "high"
+      },
+      {
+        "commentary": "Equities desk exposure is missing on 2025-01-15.",
+        "date": "2025-01-15",
+        "desk": "Equities",
+        "issue_type": "missing_value",
+        "recommended_action": "Verify exposure calculation inputs and repopulate.",
+        "severity": "high"
+      },
+      {
+        "commentary": "Commodities var_99 on 2025-01-15 is an extreme outlier (z-score -6.1).",
+        "date": "2025-01-15",
+        "desk": "Commodities",
+        "issue_type": "outlier",
+        "recommended_action": "Validate the underlying trade data and calculation for var_99.",
+        "severity": "high"
+      },
+      {
+        "commentary": "Credit desk pnl on 2025-01-29 is a severe negative outlier (z-score -7.6).",
+        "date": "2025-01-29",
+        "desk": "Credit",
+        "issue_type": "outlier",
+        "recommended_action": "Review credit positions and pnl attribution for errors.",
+        "severity": "high"
+      },
+      {
+        "commentary": "FX var_99 on 2025-02-26 is a high positive outlier (z-score 7.5).",
+        "date": "2025-02-26",
+        "desk": "FX",
+        "issue_type": "outlier",
+        "recommended_action": "Confirm FX market data and VaR model inputs.",
+        "severity": "high"
+      },
+      {
+        "commentary": "Rates desk pnl on 2025-03-05 is a large positive outlier (z-score 7.6).",
+        "date": "2025-03-05",
+        "desk": "Rates",
+        "issue_type": "outlier",
+        "recommended_action": "Inspect rates trade entries and pnl calculation.",
+        "severity": "high"
+      },
+      {
+        "commentary": "Commodities VaR moved -62% day-on-day on 2025-01-15, exceeding the 30% threshold.",
+        "date": "2025-01-15",
+        "desk": "Commodities",
+        "issue_type": "dod_breach",
+        "recommended_action": "Investigate the cause of the VaR shift and ensure model parameters are correct.",
+        "severity": "high"
+      },
+      {
+        "commentary": "Commodities VaR increased +143% day-on-day on 2025-01-16, exceeding the 30% threshold.",
+        "date": "2025-01-16",
+        "desk": "Commodities",
+        "issue_type": "dod_breach",
+        "recommended_action": "Check for data spikes or model issues driving the VaR jump.",
+        "severity": "high"
+      },
+      {
+        "commentary": "FX VaR rose +147% day-on-day on 2025-02-26, exceeding the 30% threshold.",
+        "date": "2025-02-26",
+        "desk": "FX",
+        "issue_type": "dod_breach",
+        "recommended_action": "Review FX market movements and VaR model inputs for anomalies.",
+        "severity": "high"
+      },
+      {
+        "commentary": "FX VaR fell -60% day-on-day on 2025-02-27, exceeding the 30% threshold.",
+        "date": "2025-02-27",
+        "desk": "FX",
+        "issue_type": "dod_breach",
+        "recommended_action": "Assess whether the drop reflects genuine risk change or data error.",
+        "severity": "high"
+      }
+    ],
+    "overall_status": "red",
+    "overall_summary": "The data-quality checks identified 11 high\u2011severity exceptions across missing values, outliers, and day\u2011on\u2011day VaR breaches. All issues are flagged as high severity, indicating critical data integrity problems that require immediate investigation. Overall status is red."
+  }
+}

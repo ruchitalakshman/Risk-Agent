@@ -1,0 +1,12 @@
+check,date,desk,column,value,detail,severity
+missing_value,2025-01-15,Rates,var_99,,var_99 is missing,high
+missing_value,2025-01-22,FX,pnl,,pnl is missing,high
+missing_value,2025-01-15,Equities,exposure,,exposure is missing,high
+outlier,2025-01-15,Commodities,var_99,318604.43670706206,z-score -6.1 vs Commodities history,high
+outlier,2025-01-29,Credit,pnl,-85000000.0,z-score -7.6 vs Credit history,high
+outlier,2025-02-26,FX,var_99,3122130.9973039054,z-score 7.5 vs FX history,high
+outlier,2025-03-05,Rates,pnl,90000000.0,z-score 7.6 vs Rates history,high
+dod_breach,2025-01-15,Commodities,var_99,318604.43670706206,VaR changed -62% day-on-day (limit ±30%),high
+dod_breach,2025-01-16,Commodities,var_99,772669.3054301229,VaR changed +143% day-on-day (limit ±30%),high
+dod_breach,2025-02-26,FX,var_99,3122130.9973039054,VaR changed +147% day-on-day (limit ±30%),high
+dod_breach,2025-02-27,FX,var_99,1243261.0665119432,VaR changed -60% day-on-day (limit ±30%),high

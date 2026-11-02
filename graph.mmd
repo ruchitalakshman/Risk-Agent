@@ -1,0 +1,26 @@
+---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	load_data(load_data)
+	run_checks(run_checks)
+	no_issues(no_issues)
+	draft(draft)
+	validate(validate)
+	save_report(save_report)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> load_data;
+	draft --> validate;
+	load_data --> run_checks;
+	no_issues --> save_report;
+	run_checks -.-> draft;
+	run_checks -.-> no_issues;
+	validate -.-> draft;
+	validate -.-> save_report;
+	save_report --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
